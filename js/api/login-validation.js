@@ -22,8 +22,7 @@ const apiRequest = async () => {
             });
 
             if (response.ok) {
-                const data = await response.json();
-                window.location.href = "../../html/home.html";
+                window.location.href = "../../html/main/home.html";
             } else {
                 const data = await response.json();
                 switch (true) {
@@ -33,15 +32,15 @@ const apiRequest = async () => {
                             data.errors[0].constraints.matches &&
                             data.errors[0].constraints.matches.includes("a senha deve conter uma letra maiuscula, uma letra minuscula e um caractere especial")
                         ) {
-                            window.location.href = "../../html/login.html?error&errorID=153032";
+                            window.location.href = "../../html/login/login.html?error&errorID=153032";
                         } else if (data.errors[0].constraints.isEmail && data.errors[0].constraints.isEmail.includes("Formato de email Invalido")) {
-                            window.location.href = "../../html/login.html?error&errorID=153031";
+                            window.location.href = "../../html/login/login.html?error&errorID=153031";
                         } else if (
                             data.errors[0].constraints.matches &&
                             data.errors[0].constraints.matches.includes("Formato de email Invalido") &&
                             data.errors[0].constraints.matches.includes("a senha deve conter uma letra maiuscula, uma letra minuscula e um caractere especial")
                         ) {
-                            window.location.href = "../../html/login.html?error&errorID=153030";
+                            window.location.href = "../../html/login/login.html?error&errorID=153030";
                         }
                         break;
                 
@@ -49,14 +48,13 @@ const apiRequest = async () => {
                         window.location.href = "../../html/errors/404-page.html";
                         break;
                 
-                
+                    // na proxima vez que o docker for atualizado tem que mudar a data.message aqui de "Internal server error" para "Usuario não encontrado email ou nickname incorretos"
                     case (data.status === 500 && data.message === "Internal Server Error"):
-                        console.log("aba")   
-                        window.location.href = "../../html/login.html?error&errorID=153034"
+                        window.location.href = "../../html/login/login.html?error&errorID=153034"
                         break;
                 
                     default:
-                        window.location.href = "../../html/login.html";
+                        window.location.href = "../../html/login/login.html";
                         break;
                 }
             }
