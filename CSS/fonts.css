@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Abibas';
+    src: url('../fonts/Abibas.ttf') format('truetype'), /* Formato TrueType */
+         url('../fonts/Abibas.otf') format('opentype'); /* Formato OpenType */
+}
