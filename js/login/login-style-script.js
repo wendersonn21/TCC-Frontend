@@ -19,4 +19,10 @@ const renderTitle = () => {
     }, 300);
 }
 
+function hideQueryParams() {
+    const newURL = window.location.pathname; // Obtém apenas o caminho da URL
+    window.history.replaceState({}, document.title, newURL); // Atualiza a URL sem adicionar ao histórico
+}
+
+hideQueryParams();
 renderTitle();

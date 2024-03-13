@@ -65,4 +65,10 @@ const apiRequest = async () => {
     }
 }
 
+function updateURLWithoutParams() {
+    const newURL = window.location.pathname; // Obtém o caminho da URL
+    window.history.pushState({}, '', newURL); // Atualiza a URL sem recarregar a página
+}
+
+updateURLWithoutParams();
 apiRequest();
