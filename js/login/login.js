@@ -34,7 +34,7 @@ switch (true) {
         emailErrorElement.style.display = "block";
         break;
     default:
-        console.log("Outro erro não tratado");
+        break;
 }
 
 form.addEventListener("input", () => {
