@@ -1,22 +1,28 @@
+body {
+    background-image: url("../../assets/novooo.png");
+    background-size: cover;
+}
+
 .title {
     position: absolute;
-    left: 50%;
+    top: 10%;
+    left: 47%;
+    font-size: 45px;
     transform: translateX(-50%);
     color: #000;
 }
 
 .login-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 52%;
+    left: 20%;
     transform: translate(-50%, -50%);
-    background-color: #e0def5;
     width: 20vw;
-    height: 60vh;
+    height: 40vh;
     align-items: center;
     padding: 20px 20px;
     border-radius: 3px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.349);
 }
 
 .login-container h2 {

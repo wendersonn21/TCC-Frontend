@@ -1,19 +1,29 @@
 const title = document.querySelector(".title");
 const titlePage = document.title;
 const renderTitle = () => {
-    const titleArray = ["C", "o", "d", "e", "S", "a", "v", "v", "y"];
+    const titleArray = ["C", "o", "d", "e", "S", "a", "v", "v", "i", "y"];
     let index = 0;
 
-    // Limpar o conteúdo atual
+    // Clear the current content
     title.textContent = "";
 
-    // Configurar um intervalo para adicionar cada caractere
+    // Set an interval to add each character
     const intervalId = setInterval(() => {
         if (index < titleArray.length) {
-            title.textContent += titleArray[index];
+            
+            if (index === 8) {
+                title.textContent += titleArray[index];
+                setTimeout(() => {
+                    // Remove the last character after adding the ninth character
+                    title.textContent = title.textContent.slice(0, -1);
+
+                }, 250)
+            } else {
+                title.textContent += titleArray[index];
+            }
             index++;
         } else {
-            // Cancelar o intervalo quando todos os caracteres foram adicionados
+            // Cancel the interval when all characters have been added
             clearInterval(intervalId);
         }
     }, 300);

@@ -1,6 +1,17 @@
 @media screen and (max-width: 1020px) {
     .login-container {
         width: 70vw;
-        height: 70vh;
+        height: 56vh;
+        left: 50%;
+    }
+
+    .title {
+        top: 0;
+    }
+
+    body {
+        background-image: url("../../assets/novooo.png");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
