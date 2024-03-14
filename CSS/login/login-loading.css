@@ -1,0 +1,33 @@
+body {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.organizar {
+    width: 50vw;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rebeccapurple;
+}
+
+.carregando {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 11px solid #f00;
+    border-top: 11px solid transparent;
+    animation: loading 1s infinite ease-in;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}

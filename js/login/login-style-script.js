@@ -1,5 +1,5 @@
 const title = document.querySelector(".title");
-
+const titlePage = document.title;
 const renderTitle = () => {
     const titleArray = ["C", "o", "d", "e", "S", "a", "v", "v", "y"];
     let index = 0;
@@ -23,6 +23,15 @@ function hideQueryParams() {
     const newURL = window.location.pathname; // Obtém apenas o caminho da URL
     window.history.replaceState({}, document.title, newURL); // Atualiza a URL sem adicionar ao histórico
 }
+
+window.addEventListener("blur", () => {
+    document.title = "Esperamos que volte 😥"
+})
+
+window.addEventListener("focus", () => {
+    document.title = titlePage
+})
+
 
 hideQueryParams();
 renderTitle();
