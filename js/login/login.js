@@ -6,14 +6,31 @@ const form = document.querySelector("#form");
 const emailErrorElement = document.querySelector("#emailError");
 const passwordErrorElement = document.querySelector("#passwordError");
 const usernameErrorElement = document.querySelector("#usernameError");
+const rememberMe = document.querySelector(".lembrarDeMimInput");
 
+const url = new URLSearchParams(window.location.search);
+const errorId = url.get("errorID");
 
-const url = new URLSearchParams(window.location.search)
-const errorId = url.get("errorID")
+window.addEventListener("DOMContentLoaded", () => {
+    const userData = JSON.parse(localStorage.getItem("userData"));
 
+    if (userData && userData.username && userData.email && userData.password && !window.location.href.includes("errorID")) {
+        window.location.href = `../../html/login/login-validation.html?username=${userData.username}&password=${userData.password}&email=${userData.email}`;
+    }
+});
 
+rememberMe.addEventListener("change", () => {
+    if (rememberMe.checked) {
+        const userData = {
+            username: userInput.value,
+            password: passwordInput.value,
+            email: emailInput.value
+        };
+        localStorage.setItem("userData", JSON.stringify(userData));
+    }
+});
 switch (true) {
-    case errorId === "153032": 
+    case errorId === "153032":
         passwordErrorElement.textContent = "Senha invalida";
         passwordErrorElement.style.display = "block"
         break;
@@ -40,7 +57,7 @@ switch (true) {
 form.addEventListener("input", () => {
     const isUserValid = userInput.value.length >= 7 && userInput.value.length <= 55;
     const isPasswordValid = passwordInput.value.length >= 7 && passwordInput.value.length <= 55;
-    const isEmailValid = emailInput.value.length >=  7 && emailInput.value.length <= 55;
+    const isEmailValid = emailInput.value.length >= 7 && emailInput.value.length <= 55;
 
     if (isUserValid && isPasswordValid && isEmailValid) {
         submitInput.disabled = false;

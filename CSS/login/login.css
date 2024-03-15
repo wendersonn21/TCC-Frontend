@@ -110,3 +110,11 @@ form .submit:enabled {
     text-decoration: none;
     user-select: none;
 }
+
+.lembrarDeMim {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    position: relative;
+    top: 2rem;
+}

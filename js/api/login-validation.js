@@ -4,7 +4,7 @@ const password = url.get("password")
 const email = url.get("email")
 
 const apiRequest = async () => {
-    const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTA0MjAwMTYsImV4cCI6MTcxMzA5ODQxNn0.wyxiVlmAsn_TNm5x70HvXlBe7qGREP3eLpJ5bSsM7CA";
+    const authToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTA1MDU3OTQsImV4cCI6MTcxMzE4NDE5NH0.lX_TJ9n2iUg7lL0UHsg2aVY9XJErj1yYZ6RBS41s2GA";
 
     if (username !== "" && password !== "" && email !== "") {
         try {
@@ -66,9 +66,9 @@ const apiRequest = async () => {
 }
 
 
-function hideQueryParams() {
-    const newURL = window.location.pathname; // Obtém apenas o caminho da URL
-    window.history.replaceState({}, document.title, newURL); // Atualiza a URL sem adicionar ao histórico
-}
-hideQueryParams();
+// function hideQueryParams() {
+//     const newURL = window.location.pathname; // Obtém apenas o caminho da URL
+//     window.history.replaceState({}, document.title, newURL); // Atualiza a URL sem adicionar ao histórico
+// }
+// hideQueryParams();
 apiRequest();
