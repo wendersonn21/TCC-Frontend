@@ -8,8 +8,9 @@ form.addEventListener("submit", async (e) => {
     const nickname = document.querySelector("#nickname").value
     const email = document.querySelector("#email").value
     const password = document.querySelector("#senha").value
+    const confirmPassword = document.querySelector("#confirmarSenha").value
     
-    if (name !== "" && password !== "" && email !== "" && surname !== "" && nickname !== "") {
+    if (name !== "" && password !== "" && email !== "" && surname !== "" && nickname !== "" && password === confirmPassword) {
         try {
             const response = await fetch("https://tcc-u2qf.onrender.com/users/register", {
                 method: "POST",
