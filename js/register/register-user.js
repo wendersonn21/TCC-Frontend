@@ -7,7 +7,7 @@ form.addEventListener("submit", async (e) => {
     const surname = document.querySelector("#sobrenome").value
     const nickname = document.querySelector("#nickname").value
     const email = document.querySelector("#email").value
-    const password = document.querySelector("#senha").value
+    const password = document.querySelector("#password").value
     const confirmPassword = document.querySelector("#confirmarSenha").value
     
     if (name !== "" && password !== "" && email !== "" && surname !== "" && nickname !== "" && password === confirmPassword) {
