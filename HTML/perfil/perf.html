@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../../CSS/perfil1/perff.css">
+</head>
+<body>
+<main>
+    <section class="Sectionpersonalizacao">
+
+        <div class="voltar">
+            <button class="sair">VOLTAR</button>
+        </div>
+
+        <div class="personalizacao">
+
+    
+           
+
+            
+           <img id="profileImage" src="/assets/6326055-removebg-preview.png" alt="Imagem de Perfil">
+          
+            <!-- <button id="uploadButton">Escolher nova imagem</button> -->
+
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
+            <button id="uploadButton">Selecionar Foto de Perfil</button>
+            <button id="btn-editar"> Editar </button>
+
+            <img class="logo-principal" src="/assets/logo-symbol.png" alt="">
+       
+
+    </div>
+<!--
+        <div class="personalizacao">
+            
+            <button id="btn">Selecionar Foto de Perfil</button>
+            
+            
+            <img id="profileImage" src="" alt="Profile Image" style="display: none;">
+            
+            
+            <button id="btn-editar"> Editar </button>
+
+            <img class="logo-principal" src="/assets/logo-symbol.png" alt="">
+        </div>
+    -->
+    </section>
+
+    <section class="sectionTexto">
+
+        <div class="items">
+            <div class="primeira">
+                <form action="https://api.staticforms.xyz/submit" method="post">
+
+                    <label> Nome </label>
+                    <input type="text" name="nome" placeholder="Nome">
+                    <label> Biografia</label>
+                    <textarea name="message" placeholder="Biografia" cols="30" rows="10"></textarea>
+                    
+                </form>
+            </div>
+            <div class="segunda">
+
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#">Publicações  <span class="count"> 0 </span></a></li>
+                        <li><a href="#">Seguidores   <span class="count"> 0 </span></a></li>
+                        <li><a href="#">Seguindo     <span class="count"> 0 </span></a></li>
+                    </ul>
+                </nav>
+            
+                <div class="projetosNaSecao">
+                     <h2>Meus Projetos</h2>
+                     <div id="projectsContainer">
+                        <div class="projetoCard">
+                            <p class="projetoNome">Projeto </p>
+                            <div class="projetoContainer">Conteúdo do Projeto 1: Descrição detalhada ou código.</div>
+                        </div>
+                     </div>
+                </div>
+
+
+        </div>
+        
+        <!--nome,idade,descrisao,-->
+    
+    </section>
+
+</main>
+<script src="../../js/perfil.js"></script>
+</body>
+</html>
